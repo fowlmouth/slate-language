@@ -289,7 +289,7 @@ gen@(SSAVM Compiler traits) emit: code@(SSAVM Compiler Instruction traits) withP
   values do: [| :value | gen emitObject: value fromSource: node]
 ].
 
-gen@(SSAVM Compiler traits) emit: code@(SSAVM Compiler Instruction traits) fromSource: node
+gen@(SSAVM Compiler traits) emit: code fromSource: node
 "Emitting an instruction without an immediate value required just puts the
 byte onto the end."
 [

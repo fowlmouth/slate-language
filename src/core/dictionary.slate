@@ -148,7 +148,7 @@ d@(Dictionary traits) associationAt: key ifAbsent: block
 
 d@(Dictionary traits) includesKey: key
 [
-  (d contents at: (index ::= d scanFor: key)) isNotNil
+  (d keys at: (d scanFor: key)) isNotNil
 ].
 
 d@(Dictionary traits) at: key ifAbsent: block

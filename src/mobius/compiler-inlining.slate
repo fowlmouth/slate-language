@@ -16,7 +16,7 @@ gen@(SSAVM Compiler traits) generate: _@#applyWith: on: args fromSource: node &r
   methodReg ::= gen generate: args first.
   argReg ::= gen generate: args second.
   gen emit: gen directApplyTo
-      withParameters: {methodReg. argRegs size. result. argReg}
+      withParameters: {methodReg. 1. result. argReg}
       fromSource: node.
   result
 ].
@@ -130,7 +130,7 @@ gen@(SSAVM Compiler traits) emitJumpToLabel: label fromSource: node
 [
   gen emit: gen jumpTo
       fromSource: node.
-  gen emitBranchTo: label from: node.
+  gen emitBranchTo: label fromSource: node.
 ].
 
 gen@(SSAVM Compiler traits) generate: _@#loop on: args fromSource: node &result
